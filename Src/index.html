@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="xyz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>NewsAPI</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="header">
+      <div class="header-text">
+        <h1>NewsAPI</h1>
+      </div>
+      <select id="select_sources" class="select">
+        <option value="null">All news</option>
+      </select>
+      <div class="main-search">
+        <input class="main-search-field" type="search" id="search-field" placeholder="Search...">
+        <button class="btn btn-filter" id="filter-btn"><span class="filter">Filter</span> </button>
+      </div>
+    </div>
+
+    <main class="main">
+      <div id="news" class="main-news"></div>
+      <h3 class="main-error" id="error-block" style="display: none;">There are no articles matching your request
+      </h3>
+      <button class="btn btn-load" id="load-btn">Load more</button>
+    </main>
+
+    <footer class="footer">
+      <p><a class="footer-link" href="https://newsapi.org/">Powered by News API</a></p>
+    </footer>
+
+    <template id="news-item-tpl">
+      <div class="news-item">
+        <div class="news-picture">
+        </div>
+        <div class="news-content">
+          <h2 class="news-title"></h2>
+          <h3 class="news-source"></h3>
+          <p class="news-text"></p>
+          <a class="news-link" href="#"> Читать дальше > </a>
+        </div>
+      </div>
+    </template>
+
+  </div>
+
+</body>
+
+</html>
